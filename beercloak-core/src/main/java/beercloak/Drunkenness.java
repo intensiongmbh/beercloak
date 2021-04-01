@@ -9,9 +9,9 @@ public enum Drunkenness
     WASTED(3),
     KAPUTT(4);
 
-    public static Drunkenness drunk(float abv, int qty)
+    public static Drunkenness drunk(float abv, int qty, int persons)
     {
-        return qty == 0 ? SOBER : Drunkenness.values()[Integer.min(KAPUTT.value, (int)Math.floor(qty * abv / 4.7 / 10 * (KAPUTT.value - 1) + 1))];
+        return qty == 0 ? SOBER : Drunkenness.values()[Integer.min(KAPUTT.value, (int)Math.floor((qty / (double)persons) * abv / 4.7 / 10 * (KAPUTT.value - 1) + 1))];
     }
 
     private final int value;

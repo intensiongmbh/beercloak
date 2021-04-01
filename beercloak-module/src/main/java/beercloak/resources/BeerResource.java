@@ -171,8 +171,9 @@ public class BeerResource
         BeerEntity beer = find(id);
 
         int qty = _qty[0];
+        int persons = _qty[1];
 
-        Drunkenness d = Drunkenness.drunk(beer.getAbv(), qty);
+        Drunkenness d = Drunkenness.drunk(beer.getAbv(), qty, persons);
 
         return new String[] {d.toString()};
     }

@@ -22,7 +22,14 @@
                     <input class="form-control" type="number" min="0" id="qty" name="qty" data-ng-model="qty">
                 </div>
                 <div class="col-md-1">
-                    <button class="btn btn-primary" id="drink" type="button" data-ng-click="drink(qty)">{{:: 'gulp' | translate}}</button>
+                    <button class="btn btn-primary" id="drink" type="button" data-ng-click="drink(qty,persons)">{{:: 'gulp' | translate}}</button>
+                </div>
+            </div>
+            
+            <div class="form-group" data-ng-if="!create && access.manageBeer">
+                <label class="col-md-2 control-label" for="persons">{{:: 'persons' | translate}}</label>
+                <div class="col-md-1">
+                    <input class="form-control" type="number" min="1" id="persons" name="persons" data-ng-model="persons">
                 </div>
             </div>
 

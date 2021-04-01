@@ -75,6 +75,7 @@ module.controller('BeerDetailCtrl', function($modal, $scope, realm, beer, Beer, 
     $scope.create = !beer.id;
     $scope.typesLoaded = false;
     $scope.qty = 1;
+    $scope.persons = 1;
 
     $scope.types = BeerType.query({ realm: realm.realm }, function() {
         $scope.typesLoaded = true;
@@ -130,8 +131,8 @@ module.controller('BeerDetailCtrl', function($modal, $scope, realm, beer, Beer, 
         $location.url("/realms/" + realm.realm + "/beers");
     };
 
-    $scope.drink = function(qty) {
-        Beer.drink({ realm: realm.realm, beerId: beer.id }, [ qty ], function(response) {
+    $scope.drink = function(qty, persons) {
+        Beer.drink({ realm: realm.realm, beerId: beer.id }, [ qty, persons ], function(response) {
             $modal.open({
                 templateUrl: resourceUrl + '/partials/modal/gulp.html',
                 controller: 'GulpCtrl',
