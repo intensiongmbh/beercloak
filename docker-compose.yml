@@ -13,7 +13,7 @@ services:
     command: start-dev
     volumes:
     - /etc/localtime:/etc/localtime:ro
-    - "./beercloak-module/target/beercloak-module-docker.jar:/opt/keycloak/extensions/beercloak.jar"
+    - "./beercloak-module/target/beercloak-module-docker.jar:/opt/keycloak/providers/beercloak.jar"
     - "./beercloak-module/src/main/resources/theme/beer:/opt/keycloak/themes/beer"
     - "./test/beer-realm.json:/opt/keycloak/imports/beer-realm.json"
     networks:
