@@ -31,6 +31,8 @@ BeerCloak is a collection of different techniques for building custom admin reso
 
 ## Generating certificates
 
+### Using a valid certificate
+
 1. Add the test domain to your hosts file (`/etc/hosts`)
    ```
    127.0.0.1 id.keycloak.test
@@ -46,6 +48,25 @@ BeerCloak is a collection of different techniques for building custom admin reso
 4. Update permissions for the key
    ```
    chmod 755 cert-key.pem
+   ```
+
+### Invalid certificate
+
+If you don't care about the certificate being valid, you can use `openssl` to generate one.
+
+1. Generate the certificates
+   ```
+   openssl req -newkey rsa:2048 -nodes -keyout cert-key.pem -x509 -days 3650 -out cert.pem
+   ```
+   
+2. Update permissions for the key
+   ```￼
+   chmod 755 cert-key.pem
+   ```
+
+3. Update `docker-compose.yml` > `KC_HOSTNAME` to:
+   ```yaml
+   KC_HOSTNAME: localhost:8443
    ```
 
 ## Run Beercloak
