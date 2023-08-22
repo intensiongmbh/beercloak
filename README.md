@@ -26,12 +26,6 @@ BeerCloak is a collection of different techniques for building custom admin reso
   * automatically included into the master `admin` role
 * GUI extensions to the admin console
 
-### Structure
-
-`beercloak-core`: "core" module with some "business logic", to demonstrate packaging with dependencies  
-`beercloak-module`: main module actually containing providers and everything (depends on `beercloak-core`)  
-`beercloak-ear`: EAR packaging module to combine all the above into a deployable EAR 
-
 ## Requirements
 
 * Keycloak 22.0
