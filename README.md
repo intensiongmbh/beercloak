@@ -4,6 +4,8 @@
 ![hops](https://img.shields.io/badge/hops-100%25-green)
 ![soberness](https://img.shields.io/badge/soberness-none-red)
 
+Forked from [dteleguin/beercloak](https://github.com/dteleguin/beercloak).
+
 ---
 **TL;DR**
 
@@ -88,7 +90,7 @@ Execute `test/start.sh` to build the extension and run Keycloak with Maildev.
 ## Manual build
 
 1. Run `mvn install`
-2. Copy `beercloak-ear/target/beercloak-XXX.ear` into Keycloak's `/opt/keycloak/providers` directory.
+2. Copy `target/beercloak-XXX.jar` into Keycloak's `/opt/keycloak/providers` directory.
 
 ## Running example
 
