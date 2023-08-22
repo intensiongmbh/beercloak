@@ -9,7 +9,7 @@
 
 Use `./test/start.sh` to run the project. (You will need [certificates](#generating-certificates).)
 
-Go to 
+Go to [id.keycloak.test/auth](https://id.keycloak.test/auth/).
 
 ---
 
