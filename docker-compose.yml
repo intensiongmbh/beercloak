@@ -10,7 +10,7 @@ services:
     - 8443:8443
     environment:
       KC_HTTP_RELATIVE_PATH: /auth
-      KC_HOSTNAME: id.keycloak.test:8443
+      KC_HOSTNAME: localhost:8443
       KC_HTTPS_CERTIFICATE_FILE: /etc/x509/https/tls.crt
       KC_HTTPS_CERTIFICATE_KEY_FILE: /etc/x509/https/tls.key
       KEYCLOAK_ADMIN: admin

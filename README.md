@@ -30,7 +30,8 @@ BeerCloak is a collection of different techniques for building custom admin reso
 
 ## Requirements
 
-* Keycloak 17.0.0+
+* Keycloak 22.0
+* Java 17
 * something to generate TLS certificates (`mkcert` or `openssl`)
 
 ## Generating certificates
@@ -52,6 +53,11 @@ BeerCloak is a collection of different techniques for building custom admin reso
 4. Update permissions for the key
    ```
    chmod 755 cert-key.pem
+   ```
+
+5. Update `docker-compose.yml` > `KC_HOSTNAME` to:
+   ```yaml
+   KC_HOSTNAME: id.keycloak.test:8443
    ```
 
 ### Invalid certificate
