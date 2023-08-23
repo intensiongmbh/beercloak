@@ -9,7 +9,7 @@ Forked from [dteleguin/beercloak](https://github.com/dteleguin/beercloak).
 ---
 **TL;DR**
 
-Use `./test/start.sh` to run the project. (You will need [certificates](#generating-certificates).)
+Use `./start.sh` to run the project. (You will need [certificates](#generating-certificates).)
 
 Go to [id.keycloak.test/auth](https://id.keycloak.test/auth/).
 
@@ -79,7 +79,7 @@ If you don't care about the certificate being valid, you can use `openssl` to ge
 
 ## Run Beercloak
 
-Execute `test/start.sh` to build the extension and run Keycloak with Maildev.
+Execute `start.sh` to build the extension and run Keycloak with Maildev.
 
 ## Manual build
 
